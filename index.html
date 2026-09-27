@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DesignClarity — All Links</title>
+<meta name="description" content="Every DesignClarity store, freebie, and project in one place. Printable planners, invitations, wall art, AI prompt packs, game assets, and honest guides.">
+<!-- ============================================================
+  DESIGNCLARITY LINK HUB — adapted from the factory's
+  Link-in-Bio Template (money/listing-assets/link-in-bio-template).
+  Single file. No external fonts, images, scripts, or network calls.
+  Works opened directly (file://) and hosted (GitHub Pages).
+
+  TO CUSTOMIZE: search for "EDIT ME".
+  - BREVO-FORM-PLACEHOLDER: replace with the real Brevo double
+    opt-in form URL once created in the Brevo dashboard.
+============================================================ -->
+<style>
+  :root{ --radius:18px; --shadow:0 8px 24px rgba(0,0,0,.35); }
+
+  /* ---------- THEME: MIDNIGHT (DesignClarity default) ---------- */
+  body[data-theme="midnight"]{
+    --bg1:#14161f; --bg2:#1e2233; --bg3:#0b0d14;
+    --ink:#f2f4fa; --ink-soft:rgba(242,244,250,.72);
+    --card:#232839; --card-ink:#f2f4fa;
+    --accent:#7dd3a8; --accent-ink:#0b0d14;
+    --ring:rgba(125,211,168,.9);
+  }
+  /* ---------- THEME: FOREST ---------- */
+  body[data-theme="forest"]{
+    --bg1:#1d4d33; --bg2:#0f2e1f; --bg3:#0a1f14;
+    --ink:#f3efe3; --ink-soft:rgba(243,239,227,.75);
+    --card:#f3efe3; --card-ink:#12291b;
+    --accent:#e8b04b; --accent-ink:#12291b;
+    --ring:rgba(232,176,75,.9);
+  }
+  /* ---------- THEME: MONO ---------- */
+  body[data-theme="mono"]{
+    --bg1:#f4f4f4; --bg2:#e8e8e8; --bg3:#dcdcdc;
+    --ink:#111111; --ink-soft:rgba(17,17,17,.65);
+    --card:#ffffff; --card-ink:#111111;
+    --accent:#111111; --accent-ink:#ffffff;
+    --ring:rgba(17,17,17,.85);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3));
+    background-attachment:fixed; color:var(--ink);
+    min-height:100vh; display:flex; justify-content:center;
+    padding:40px 16px 48px; transition:background .35s ease;
+  }
+  .page{ width:100%; max-width:400px; display:flex; flex-direction:column; align-items:center; }
+
+  .avatar{
+    width:104px; height:104px; border-radius:50%;
+    background:var(--accent); color:var(--accent-ink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:38px; font-weight:800; letter-spacing:1px;
+    border:4px solid var(--ring); box-shadow:var(--shadow);
+  }
+  h1{ font-size:26px; margin-top:16px; text-align:center; }
+  .bio{ margin-top:8px; font-size:15px; color:var(--ink-soft); text-align:center; line-height:1.45; max-width:340px; }
+
+  .stats{ display:flex; gap:12px; margin-top:20px; width:100%; }
+  .stat{ flex:1; background:var(--card); color:var(--card-ink);
+    border-radius:var(--radius); padding:14px 8px; text-align:center; box-shadow:var(--shadow); }
+  .stat b{ display:block; font-size:20px; }
+  .stat span{ font-size:12px; opacity:.7; }
+
+  .section-label{ margin:26px 0 2px; font-size:11px; text-transform:uppercase; letter-spacing:2px; color:var(--ink-soft); align-self:flex-start; }
+
+  .featured{
+    margin-top:12px; width:100%; background:var(--accent); color:var(--accent-ink);
+    border-radius:var(--radius); padding:18px; text-decoration:none; display:block;
+    box-shadow:var(--shadow); transition:transform .15s ease;
+  }
+  .featured:active{ transform:scale(.98); }
+  .featured .kicker{ font-size:11px; text-transform:uppercase; letter-spacing:2px; opacity:.8; }
+  .featured h2{ font-size:19px; margin-top:6px; }
+  .featured p{ font-size:14px; margin-top:6px; opacity:.9; line-height:1.45; }
+
+  .links{ margin-top:12px; width:100%; display:flex; flex-direction:column; gap:12px; }
+  .link-btn{
+    background:var(--card); color:var(--card-ink);
+    border-radius:var(--radius); padding:16px;
+    text-decoration:none; text-align:center; font-size:16px; font-weight:700;
+    box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; gap:10px;
+    transition:transform .15s ease;
+  }
+  .link-btn:active{ transform:scale(.98); }
+  .link-btn .dot{ width:9px; height:9px; border-radius:50%; background:var(--accent); flex:none; }
+  .link-btn small{ display:block; font-size:12px; font-weight:400; opacity:.65; }
+  .link-btn .txt{ display:flex; flex-direction:column; gap:2px; }
+
+  .placeholder{ opacity:.55; border:1px dashed var(--ink-soft); }
+  .placeholder-note{ font-size:11px; color:var(--ink-soft); margin-top:6px; text-align:center; }
+
+  .themes{ margin-top:20px; display:flex; gap:10px; align-items:center; }
+  .themes p{ font-size:12px; color:var(--ink-soft); margin-right:2px; }
+  .theme-btn{ width:38px; height:38px; border-radius:50%; border:3px solid transparent; cursor:pointer; padding:0;
+    box-shadow:0 2px 8px rgba(0,0,0,.25); }
+  .theme-btn[aria-pressed="true"]{ border-color:var(--ring); transform:scale(1.08); }
+  .theme-btn[data-theme-btn="midnight"]{ background:linear-gradient(135deg,#232839,#0b0d14); }
+  .theme-btn[data-theme-btn="forest"]{ background:linear-gradient(135deg,#2e7d4f,#0f2e1f); }
+  .theme-btn[data-theme-btn="mono"]{ background:linear-gradient(135deg,#ffffff,#9a9a9a); }
+
+  .social{ margin-top:24px; display:flex; gap:18px; }
+  .social a{ width:46px; height:46px; border-radius:50%; background:var(--card); color:var(--card-ink);
+    display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow); transition:transform .15s ease; }
+  .social a:active{ transform:scale(.94); }
+  .social svg{ width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+  footer{ margin-top:28px; font-size:12px; color:var(--ink-soft); text-align:center; line-height:1.6; }
+
+  @media (min-width:480px){ h1{ font-size:28px; } .avatar{ width:112px; height:112px; font-size:42px; } }
+</style>
+</head>
+<body data-theme="midnight">
+
+<main class="page">
+
+  <div class="avatar" aria-label="DesignClarity logo">DC</div>
+  <h1>DesignClarity</h1>
+  <p class="bio">Instant-download printables, planners, AI prompt packs, and game assets — designed with AI assistance, built honestly, from $0 in public.</p>
+
+  <!-- Honest counts only: real product numbers, no fake followers or sales -->
+  <div class="stats">
+    <div class="stat"><b>10</b><span>Gumroad products</span></div>
+    <div class="stat"><b>36</b><span>Payhip catalog</span></div>
+    <div class="stat"><b>10</b><span>itch.io projects</span></div>
+  </div>
+
+  <p class="section-label">Start here — free</p>
+  <a class="featured" href="https://designclarity.gumroad.com/l/side-hustle-prompt-pack/REDDITPACK">
+    <span class="kicker">Free download</span>
+    <h2>Side-Hustle Prompt Pack — 100 AI Prompts</h2>
+    <p>Copy-paste prompts for freelancing, Etsy, and content. Free via this link, no catch.</p>
+  </a>
+
+  <p class="section-label">Shops</p>
+  <nav class="links">
+    <a class="link-btn" href="https://designclarity.gumroad.com"><span class="dot"></span><span class="txt">Gumroad Store<small>Printables, planners &amp; tools — instant download</small></span></a>
+    <a class="link-btn" href="https://whop.com/devon-s-digital-supply"><span class="dot"></span><span class="txt">Courses &amp; Guides on Whop<small>Devon's Digital Supply — learn the playbooks</small></span></a>
+    <a class="link-btn" href="https://designclarity.itch.io/"><span class="dot"></span><span class="txt">Game Assets on itch.io<small>Pixel icons, UI kits &amp; HTML tools</small></span></a>
+    <a class="link-btn" href="https://payhip.com/DesignClarity"><span class="dot"></span><span class="txt">Full Catalog on Payhip<small>Browse all 36 products</small></span></a>
+  </nav>
+
+  <p class="section-label">Follow the factory</p>
+  <nav class="links">
+    <a class="link-btn" href="https://www.pinterest.com/designclarityofficial/"><span class="dot"></span><span class="txt">Pinterest<small>Fresh printable ideas &amp; freebies weekly</small></span></a>
+    <a class="link-btn" href="https://fanvue.com/designclarity"><span class="dot"></span><span class="txt">Fanvue — Maya &amp; Guides<small>Maya is a 100% AI-generated model</small></span></a>
+    <a class="link-btn" href="https://contra.com/devon_sack_ozaa31xl"><span class="dot"></span><span class="txt">Custom Design Services<small>Hire Devon on Contra</small></span></a>
+  </nav>
+
+  <p class="section-label">Email list</p>
+  <nav class="links">
+    <!-- EDIT ME: BREVO-FORM-PLACEHOLDER — replace href with the real Brevo double opt-in form URL -->
+    <a class="link-btn placeholder" href="#brevo-form-placeholder"><span class="dot"></span><span class="txt">Get the Free Prompt Pack by Email<small>Newsletter signup — coming soon</small></span></a>
+  </nav>
+  <p class="placeholder-note">Email signup activates once the Brevo form is created — see hosting-plan.md</p>
+
+  <div class="themes" role="group" aria-label="Choose a color theme">
+    <p>Theme:</p>
+    <button class="theme-btn" data-theme-btn="midnight" aria-pressed="true" aria-label="Midnight theme" title="Midnight"></button>
+    <button class="theme-btn" data-theme-btn="forest" aria-pressed="false" aria-label="Forest theme" title="Forest"></button>
+    <button class="theme-btn" data-theme-btn="mono" aria-pressed="false" aria-label="Mono theme" title="Mono"></button>
+  </div>
+
+  <div class="social">
+    <a href="https://www.pinterest.com/designclarityofficial/" aria-label="Pinterest">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 20.5c.8-3.2 2-8 2-8"/><path d="M11.5 12.5c-.6-.3-1-1-1-1.8 0-1.2 1-2.2 2.3-2.2 1.4 0 2.4 1 2.4 2.3 0 1.7-1 3.2-2.5 3.2-.5 0-1-.3-1.2-.7"/></svg>
+    </a>
+    <a href="https://designclarity.gumroad.com" aria-label="Gumroad store">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="M4 10h16"/></svg>
+    </a>
+  </div>
+
+  <footer>DesignClarity — building an honest digital-product business in public, from $0.<br>Cover images created with AI tools; all designs are original.</footer>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var THEMES = ["midnight","forest","mono"];
+  var KEY = "dc-hub-theme";
+  function applyTheme(name){
+    if(THEMES.indexOf(name) === -1){ name = "midnight"; }
+    document.body.setAttribute("data-theme", name);
+    var btns = document.querySelectorAll("[data-theme-btn]");
+    for(var i=0;i<btns.length;i++){
+      btns[i].setAttribute("aria-pressed", btns[i].getAttribute("data-theme-btn") === name ? "true" : "false");
+    }
+    try{ localStorage.setItem(KEY, name); }catch(e){}
+  }
+  var btns = document.querySelectorAll("[data-theme-btn]");
+  for(var i=0;i<btns.length;i++){
+    (function(b){ b.addEventListener("click", function(){ applyTheme(b.getAttribute("data-theme-btn")); }); })(btns[i]);
+  }
+  var saved = "midnight";
+  try{ saved = localStorage.getItem(KEY) || "midnight"; }catch(e){}
+  applyTheme(saved);
+})();
+</script>
+</body>
+</html>
